@@ -1,122 +1,64 @@
 <?xml version="1.0"?>
-<Configuration Version="1" PluginVersion="1.1.4.4" UpdateNotifications="Yes" DefaultRepository="Yes" ShowWelcome="false" SfxVolumeAdjustment="100" UseOsClipboard="true" TtsVolumeAdjustment="100" DebugLevel="Info" FfxivPartyOrdering="Legacy" FfxivCustomPartyOrder="19, 1, 21, 3, 32, 37, 24, 6, 28, 33, 40, 20, 2, 22, 4, 30, 29, 34, 39, 23, 5, 31, 38, 25, 7, 27, 26, 35, 36" UseACTForTTS="false" UseACTForSound="false" WarnAdmin="true" EventSeparator="" StartupTriggerId="00000000-0000-0000-0000-000000000000" UseScarborough="true" StartupTriggerType="Trigger" LogNormalEvents="true" FfxivLogNetwork="false" TestLiveByDefault="false" WindowToMonitor="FINAL FANTASY XIV" DeveloperMode="false" CacheImageExpiry="518400" CacheSoundExpiry="518400" CacheJsonExpiry="10080" CacheRepoExpiry="518400" CacheFileExpiry="518400" LogVariableExpansions="false">
-  <Root Id="9f655287-2ad3-4e66-b410-0731544520b1" Name="Local triggers" Enabled="true">
-    <Folders>
-      <Folder Id="8a069c02-ed4c-45f1-960f-04fbceb0c0aa" Name="Testing" Enabled="true">
-        <Folders />
-        <Triggers>
-          <Trigger Enabled="true" Name="Third Test" Id="ec1a5c4f-799e-48e6-86c0-e76f51b03e88" RegularExpression="test1">
-            <Actions>
-              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="TestCounter" VariableExpression="${var:TestCounter} + 1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
-                <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
-              </Action>
-              <Action OrderNumber="2" UseTTSTextExpression="Test Three" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
-                <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
-              </Action>
-            </Actions>
-            <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${var:TestCounter}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-            </Condition>
-          </Trigger>
-          <Trigger Enabled="true" Name="First Test" Id="f20238d5-8bec-4722-9908-79237b771029" RegularExpression="test1">
-            <Actions>
-              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="TestCounter" VariableExpression="${var:TestCounter} + 1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
-                <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
-              </Action>
-              <Action OrderNumber="2" UseTTSTextExpression="Value is ${var:TestCounter}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" Asynchronous="False">
-                <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
-              </Action>
-            </Actions>
-            <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${var:TestCounter}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
-            </Condition>
-          </Trigger>
-          <Trigger Enabled="true" Name="Reset" Id="11be26c5-2461-4a4d-a5ea-37fa94bf5c18" RegularExpression="Hojoring&gt;WIPEOUT|End encounter">
-            <Actions>
-              <Action OrderNumber="1" VariableName="TestCounter" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
-                <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
-              </Action>
-            </Actions>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="8a069c02-ed4c-45f1-960f-04fbceb0c0aa" Name="Testing" Enabled="true">
+    <Folders />
+    <Triggers>
+      <Trigger Enabled="true" Name="Third Test" Id="ec1a5c4f-799e-48e6-86c0-e76f51b03e88" RegularExpression="test1">
+        <Actions>
+          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="TestCounter" VariableExpression="${var:TestCounter} + 1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
             <Conditions />
-          </Trigger>
-          <Trigger Enabled="true" Name="Second Test" Id="74c62cc2-1d19-448e-aaf4-98502711e0c5" RegularExpression="test1">
-            <Actions>
-              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="TestCounter" VariableExpression="${var:TestCounter} + 1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
-                <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
-              </Action>
-              <Action OrderNumber="2" UseTTSTextExpression="Test Two" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
-                <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
-              </Action>
-            </Actions>
-            <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${var:TestCounter}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-            </Condition>
+          </Action>
+          <Action OrderNumber="2" UseTTSTextExpression="Test Three" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+            <Condition Enabled="false" Grouping="Or" />
             <Conditions />
-          </Trigger>
-        </Triggers>
-      </Folder>
-    </Folders>
-    <Triggers />
-  </Root>
-  <RepositoryRoot Name="Remote triggers" Enabled="false">
-    <Repositories />
-  </RepositoryRoot>
-  <Substitutions />
-  <PersistentVariables>
-    <Scalar />
-    <List />
-    <Table>
-      <Item>
-        <Key>
-          <string>PermaRaidBuffTable</string>
-        </Key>
-        <Value>
-          <VariableTable LastChanger="Trigger '# - Raid Buffs Placement (@9297ef2b-e02b-4d23-a273-5c802053d8e0)' action 'Set table variable (PermaRaidBuffTable) value at (4,2) with string expression (${_imageaura[RaidBuffAuraPlacement].y})'" LastChanged="2021-12-17T22:25:49.6506843+01:00">
-            <Rows>
-              <VariableTableRow>
-                <Values>
-                  <VariableScalar LastChanger="N/A" LastChanged="2021-12-17T22:25:49.6506843+01:00">
-                    <Value>XPosRaidBuffAura</Value>
-                  </VariableScalar>
-                  <VariableScalar LastChanger="N/A" LastChanged="2021-12-17T22:25:49.6506843+01:00">
-                    <Value>YPosRaidBuffAura</Value>
-                  </VariableScalar>
-                  <VariableScalar LastChanger="N/A" LastChanged="2021-12-17T22:25:16.5482288+01:00">
-                    <Value>WidthRaidBuffAura</Value>
-                  </VariableScalar>
-                  <VariableScalar LastChanger="N/A" LastChanged="2021-12-17T22:25:16.5492278+01:00">
-                    <Value>HeightRaidBuffAura</Value>
-                  </VariableScalar>
-                </Values>
-              </VariableTableRow>
-              <VariableTableRow>
-                <Values>
-                  <VariableScalar LastChanger="N/A" LastChanged="2021-12-17T22:25:49.6506843+01:00">
-                    <Value />
-                  </VariableScalar>
-                  <VariableScalar LastChanger="N/A" LastChanged="2021-12-17T22:25:49.6506843+01:00">
-                    <Value />
-                  </VariableScalar>
-                  <VariableScalar LastChanger="N/A" LastChanged="2021-12-17T22:25:16.5492278+01:00">
-                    <Value>40</Value>
-                  </VariableScalar>
-                  <VariableScalar LastChanger="N/A" LastChanged="2021-12-17T22:25:16.5492278+01:00">
-                    <Value>40</Value>
-                  </VariableScalar>
-                </Values>
-              </VariableTableRow>
-            </Rows>
-          </VariableTable>
-        </Value>
-      </Item>
-    </Table>
-  </PersistentVariables>
-</Configuration>
+          </Action>
+        </Actions>
+        <Condition Enabled="true" Grouping="And">
+          <ConditionSingle Enabled="true" ExpressionL="${var:TestCounter}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+        </Condition>
+      </Trigger>
+      <Trigger Enabled="true" Name="First Test" Id="f20238d5-8bec-4722-9908-79237b771029" RegularExpression="test1">
+        <Actions>
+          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="TestCounter" VariableExpression="${var:TestCounter} + 1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="2" UseTTSTextExpression="Value is ${var:TestCounter}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+        </Actions>
+        <Condition Enabled="true" Grouping="And">
+          <ConditionSingle Enabled="true" ExpressionL="${var:TestCounter}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+        </Condition>
+      </Trigger>
+      <Trigger Enabled="true" Name="Reset" Id="11be26c5-2461-4a4d-a5ea-37fa94bf5c18" RegularExpression="Hojoring&gt;WIPEOUT|End encounter">
+        <Actions>
+          <Action OrderNumber="1" VariableName="TestCounter" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Trigger>
+      <Trigger Enabled="true" Name="Second Test" Id="74c62cc2-1d19-448e-aaf4-98502711e0c5" RegularExpression="test1">
+        <Actions>
+          <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="TestCounter" VariableExpression="${var:TestCounter} + 1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="2" UseTTSTextExpression="Test Two" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+        </Actions>
+        <Condition Enabled="true" Grouping="And">
+          <ConditionSingle Enabled="true" ExpressionL="${var:TestCounter}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+        </Condition>
+        <Conditions />
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>
